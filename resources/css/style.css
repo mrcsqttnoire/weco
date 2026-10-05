@@ -1,0 +1,70 @@
+:root{
+    --primary-color: #101922;
+    --primary-color-50: rgba(16, 25, 30, 50%);
+    --secondary-color : #192633;
+    --secondary-color-50 : rgba(25, 38, 51, 50%);
+    --accent-color: #137FEC;
+    --color3: #324D67;
+    --text-color: #92ADC9;
+    --input-Form-Color : #233648;
+}
+@font-face {
+    font-family: 'inter';
+    src: url('../../public/fonts/inter/Inter-VariableFont.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'inter';
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+.success-bg-color{
+    background-color: rgba(0, 255, 0, 10%) !important;    
+}
+.pop-up{
+    visibility: hidden;
+    padding: 15px 20px; 
+    left: 50%;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    background-color: rgba(255, 0, 0, 10%);
+    border-radius: 10px;
+    font-size: 14px;
+    z-index: 2;
+    animation: scaleIn 250ms ease-out, delay_affichage 4000ms ease-in;
+}
+@keyframes scaleIn {
+    0% {
+        scale: 0;
+    }
+    80% {
+        scale: 1.1;
+    }
+    100% {
+        scale: 1;
+        visibility: hidden;
+    }
+}
+@keyframes delay_affichage {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}

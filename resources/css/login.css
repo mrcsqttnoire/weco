@@ -1,0 +1,310 @@
+@import url('style.css');
+header{
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 73px;
+    border-bottom: 1px solid var(--color3);
+    box-shadow: 0 0 1px var(--color3) ;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    height: 73px;
+}
+.logo{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    float: left;
+}
+.logo a{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.btnSignup{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    align-items: center;
+    float: right;
+}
+.btnSignup a{
+    padding: 10px 20px;
+    margin-left: 15px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.btnSignup a:hover{
+    scale: 0.95;
+}
+.btnSignup p{
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: medium;
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+.lighter-top{
+    position: absolute;
+    top: -5%;
+    left: 390px;
+    width: 280px;
+    height: 280px;
+    background-color: rgba(19, 127, 236, 10%);
+    border-radius: 100%;
+    filter: blur(15px);
+    z-index: -1;
+}
+
+.lighter-bottom{
+    position: absolute;
+    bottom: -10%;
+    right: 400px;
+    width: 450px;
+    height: 450px;
+    background-color: rgba(19, 127, 236, 5%);
+    border-radius: 100%;
+    filter: blur(15px);
+    z-index: -1;
+}
+
+.main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes slideInY {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.loginForm{
+    display: inline-block;
+    margin-top: 30px;
+    background-color: var(--secondary-color);
+    width: 480px;
+    border-radius: 10px;
+    border: 1px solid var(--color3);
+    animation: slideInY 0.8s ease-out;
+    box-shadow: 0 0 1px var(--color3) ;
+}
+.headForm{
+    display: flex;
+    padding: 20px 25px;
+    height: 128px;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url('../../public/images/headBackground.png');
+    border-radius: 10px;
+}
+.headForm h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.headForm p {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.mainForm{
+    padding: 20px 25px;
+}
+label{
+    font-size: 14px;
+    font-weight: 400;
+}
+.input{
+    display: flex;
+    width: 430px;
+    height: 48px;
+    margin: 10px 0 20px 0;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    border: var(--color3) solid 1px;
+    box-shadow: 0 0 1px var(--color3) ;
+}
+input[type = "text"], input[type = "password"]{
+    width: 430px;
+    height: 46px;
+    background-color: var(--primary-color);
+    border-style: none;
+    border-radius: 5px;
+}
+input[type = "text"]::placeholder, input[type = "password"]::placeholder{
+    color: var(--text-color);
+    opacity: 70%;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px var(--primary-color) inset !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+.input img{
+    margin-left: 10px;
+}
+input::after{
+    background-color: var(--primary-color);
+}
+input:focus{
+    border-style: none;
+    outline: none;
+    box-shadow: none;
+}
+input[type = "submit"]{
+    width: 430px;
+    height: 48px;
+    margin: 5px 0 10px 0;
+    background-color: var(--accent-color);
+    border-style: none  ;
+    border-radius: 10px;
+}
+.footForm{
+    display: flex;
+    padding: 16px 0;
+    background-color: var(--primary-color-50);
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius : 10px;
+    border-bottom-right-radius : 10px;
+    border-top: 1px solid var(--color3);
+    box-shadow: 0 0 1px var(--color3) ;
+}
+.footForm p{
+    margin-right: 10px;
+    color: var(--text-color);
+}
+.footForm a{
+    color: var(--accent-color);
+    transition: all 0.3s ease;
+}
+.footForm a:hover{
+    opacity: 80%;
+}
+
+footer{
+    position: fixed;
+    display: flex;
+    bottom: 0%;
+    width: 100%;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    font-size: 14px;
+}
+footer p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center  ;
+    color: var(--color3);
+}
+.contetntFloatfen{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.floatFen{
+    margin: auto;
+    width: 670px;
+    padding: 48px;
+    border-radius: 10px;
+    background-color: #1A2632;
+}
+.headFloatFen{
+    margin-bottom: 36px;
+    text-align: center;
+}
+.headFloatFen h3{
+    font-size: 24px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    font-weight: 1000;
+}
+.headFloatFen h2{
+    margin-top: 28px;
+    margin-bottom: 22px;
+    font-size: 36px;
+}
+.headFloatFen p{
+    color: var(--text-color);
+}
+.mainFloatFen{ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.discoverRadio label{
+    padding: 20px;
+}
+.commencer{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px !important ;
+    width: 200px !important;
+    height: 48px;
+    margin: auto;
+    background-color: var(--accent-color);
+    border-style: none  ;
+    border-radius: 10px;
+}
+.selected{
+    color: var(--accent-color);
+    border: var(--accent-color) solid 1px;
+    box-shadow: 0 0 2px var(--accent-color);
+}
+input[type=submit]:disabled{
+    background-color: gray;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.discoverRadio{
+    padding: 20px;
+    background-color: #243241;
+    border-radius: 10px;
+    text-align: center;
+}
+.discoverRadio label{
+    color: var(--text-color);
+}
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .main {
+    width: 100%;
+  }
+  .loginForm{
+    width: 98%;
+    margin: 70px auto;
+  }
+  .headForm{
+    background-size: cover;
+  }
+  .btnSignup p{
+    display: none;
+  }
+}

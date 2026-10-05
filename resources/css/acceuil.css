@@ -1,0 +1,314 @@
+@import url('style.css');
+li{
+    list-style: none;
+}
+header{    
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 73px;
+    border-bottom: 1px solid var(--color3);
+    box-shadow: 0 0 1px var(--color3) ;
+}
+.selected{
+    filter: invert(35%) sepia(98%) saturate(2000%) hue-rotate(196deg) brightness(98%) contrast(95%);
+}
+.notSelected{
+    filter: brightness(0) invert(72%) sepia(15%) saturate(500%) hue-rotate(180deg) brightness(95%) contrast(85%);
+}
+body{
+    background-color: var(--primary-color);
+}
+.wrapper{
+    width: 95%;
+    margin: 0 auto;
+}
+.header{
+    width: 100%;
+    height: 73px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    float: left;
+}
+.right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    float: left;
+}
+.logo a{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.recherche{
+    display: flex;
+    width: 384;
+    height: 40px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    background-color: var(--color3);
+    border-radius: 10px;
+    border: var(--color3) solid 1px;
+    box-shadow: 0 0 1px var(--color3) ;
+}
+input[type = "text"]{
+    width: 384;
+    height: 38px;
+    background-color: var(--color3);
+    border-style: none;
+    border-radius: 5px;
+}
+input[type = "text"]::placeholder{
+    color: var(--text-color);
+    opacity: 80%;
+    font-weight: 400;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px var(--primary-color) inset !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+.recherche img{
+    margin-left: 15px;
+}
+input::after{
+    background-color: var(--primary-color);
+}
+input:focus{
+    border-style: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.nav-bar{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+.nav-bar li a {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+}
+.nav-bar li a h4{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color) ;
+}
+.account img{
+    width: 40px;
+    height: 40px;
+    margin-left: 32px;
+    background-color: var(--color3);
+    border-radius: 100%;
+}
+.mainContent{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+.filter{
+    position: sticky;
+    top: 0;
+    width: 288px;
+    padding: 30px 0px 30px 30px;
+}
+.publications{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 672px;
+    margin-top: 30px;
+    border-radius: 10px;    
+}
+.pubContent{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: var(--color3) solid 1px;
+}
+.pubHead{
+    position: relative;
+    display: flex;
+    padding: 20px 20px 0 20px;
+    align-items: center;
+    gap: 15px;
+}
+.pubHead img{
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    border-radius: 100%;
+}
+.pubHead p {
+    color: var(--text-color);
+    font-size: 14px;
+    opacity: 50%;
+}
+.badgeDomaine{
+    position: absolute;
+    right: 20px;
+    top: 20;
+    background-color: rgba(239, 68, 68, 0.2);
+    padding: 5px 20px;
+    border-radius: 20px; 
+    font-size: 12px;
+}
+.badgeDomaine p{
+    color: #EF4444 !important;
+    filter: brightness(3);
+}
+.pubMain{
+    padding: 20px;
+}
+
+.pubMain p{
+    margin-top: 10px;
+    color: var(--text-color);
+}
+.pubMain img{
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.pubFoot{
+    height: 45px;
+    display: flex;
+    padding: 20px;
+    background-color: var(--secondary-color-50);
+    gap: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: var(--color3 ) solid 1px;
+}
+.action{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.formulaire{
+    position: sticky;
+    top: 0;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Pagination{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.TextePage{ 
+    opacity: 50%;
+    font-family: 'inter';
+    font-weight: 200;
+}
+.pageContainer{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    gap: 20px;
+}
+
+.PageAction{
+    width: auto;
+    background-color: #137FEC;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: white;
+    
+}
+.PageActionBlocked{
+    background-color: #137FEC;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: var(--text-color);
+    
+}
+.separation{
+    width: 1px;
+    background-color: var(--color3);
+    align-self: stretch;
+}
+
+.commentSection{
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+    padding-top: 10px !important;
+    position: fixed;
+    overflow-y: scroll;
+    top: 0px;
+    background-color: rgba(16, 25, 34,0.6);
+    z-index: 99999;
+}
+::-webkit-scrollbar {
+    width: 8px; 
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a2e;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4a4a8a;
+    border-radius: 10px;
+    border: 2px solid #1a1a2e; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7a7aff;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #ffffff;
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .publications{
+    width: 90%;
+    margin: 30px auto;
+  }
+  .recherche, .compte, .formulaire, .filter, .TextePage {
+    display: none;
+  }
+  
+    
+}
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .publications{
+    margin-right: 30px;
+  }
+  .recherche, .formulaire {
+    display: none;
+  }
+}

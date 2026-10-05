@@ -1,0 +1,194 @@
+@import url('style.css');
+:root{
+    --primary-color: #101922;
+    --primary-color-50: rgba(16, 25, 30, 50%);
+    --secondary-color : #192633;
+    --secondary-color-50 : rgba(25, 38, 51, 50%);
+    --accent-color: #137FEC;
+    --color3: #324D67;
+    --text-color: #92ADC9;
+    --input-Form-Color : #233648;
+}
+.formPublication{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+.rightAside{
+    margin-top: 30px;
+}
+.headForm h3{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.titre, .categorie, .Domaine, .content, .image {
+    width: 271px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.titre label, .categorie label, .Domaine label, .content label, .image label{
+    text-transform: capitalize  ;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.titre input[type = 'text']{
+    width: 271px ;
+    height: 38px;
+    padding: 10px;
+    background-color: var(--input-Form-Color);
+}
+.checkBox{
+    display: flex;
+    justify-content: space-around;
+}
+.check{
+    display: flex;
+    width: 125px;
+    height: 34px;
+    background-color: var(--input-Form-Color);
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    text-transform: capitalize !important;
+}
+.check label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: var(--text-color);
+    text-transform: capitalize !important;
+}
+#article:checked ~ .pArticle {
+    color: var(--accent-color);
+    background-color: rgba(16, 25, 34, 70%);
+    border: var(--accent-color) solid 1px ;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(19, 127, 236, 35%) ;
+}
+#problème:checked ~ .pProblème{
+    color: var(--accent-color);
+    background-color: rgba(16, 25, 34, 70%);
+    border: var(--accent-color) solid 1px ;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(19, 127, 236, 35%) ;
+}
+.addDomain{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 220px;
+    padding: 15px;
+    height: 145px;
+    border: var(--color3) solid 1px;
+    border-radius: 10px;
+    background-color: rgba(16, 25, 34,0.8);
+    z-index: 111;
+}
+.inputAddDomain{
+    width: 239px !important ;
+    height: 38px !important;
+    margin-top: 6px;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: var(--input-Form-Color);
+}
+.addDomain input[type = 'submit']{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    padding: 5px 20px;
+    border-style: none;
+    border-radius: 7px;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+.annulerAddDomain{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    padding: 5px 20px;
+    border-radius: 7px;
+    background-color: white;
+    color: var(--primary-color);
+    text-align: center;
+}
+.headDomain{
+    position: relative;
+    width: 271px;
+    display: flex;
+    justify-content: space-between;
+}
+.labHeadDomain{
+    font-size: 13px !important;
+    color: var(--accent-color) !important;
+}
+
+.selectDomain{
+    width: 271px;
+    height: 38px;
+    background-color: var(--input-Form-Color);
+    border-style: none;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+select:focus, textarea:focus{    
+    border-style: none;
+    outline: none;
+    box-shadow: none;
+}
+.content textarea{
+    width: 271px;
+    height: 120;
+    resize: none;
+    background-color: var(--input-Form-Color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+input[type = 'file']{
+    display: none;
+    padding: 20px;
+}
+.Photo{
+    width: 271px;
+    height: 95px;
+    border: rgba(19, 127, 236, 50%) dashed 2px;
+    border-radius: 5px;
+}
+.Photo label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 271px;
+    height: 95px;
+    cursor: pointer;
+    text-transform: capitalize !important;
+}
+.Publier{
+    width: 271px;
+    height: 48px;
+    margin-bottom: 50px;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer{
+    border-top: #324D67 solid 1px;
+    padding-top: 30px;
+    opacity: 50%;
+}
+.footer span{
+    display: block;
+    text-align: center;
+}
